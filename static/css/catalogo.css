@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    background-color: #000000;
+}
+
+/* Estilos da página index.html */
+
+nav {
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    width: 100%;
+}
+
+
+nav div#filtro-config {
+    display: block;
+    margin-left: 5rem;
+    
+
+}
+
+nav div#filtro-config div#filtro-filmes form div#filtro-input{
+    border: solid 1px #fff;
+    padding: .3rem;
+}
+
+nav div#filtro-config div#filtro-filmes form div#filtro-input i {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+nav div#filtro-config div#filtro-filmes form div#filtro-input input {
+    background-color: #000000;
+    color: #fff;
+    border-style: none;
+    font-size: 1.2rem;
+    outline-style: none;
+}
+
+nav div#filtro-config div#icon-config a#config {
+    padding: 1rem;
+    text-align: end;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    transition: all .2s ease-out;
+    /* position: absolute; comentei esse por não acertar na posição certa com ele*/
+    top: 0;
+    right: 1rem;
+}
+/* /////////// fim modicando para testar o filter */
+
+nav div#filtro-config div#icon-config a#config:hover {
+    color: #F40000;
+}
+
+
+section#catalogo {
+    max-width: 100%;
+    padding: 2rem;
+    overflow-x: auto;
+}
+
+
+/* modificando para o filter //////////// */
+section#catalogo div#title-lista{
+    text-align: center;
+    font-size:20px;
+    padding: 2rem;
+}
+
+section#catalogo h3 {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    margin-bottom: 3rem;
+}
+
+section#catalogo div#title-lista a{
+    width: 25%;
+    text-align: right;
+    text-decoration: none;
+    color: #fff;
+}
+/* ////////////// fim modificando para o filter */
+
+section#catalogo table {
+    border-collapse: collapse;
+    width: 100%;
+    border-spacing: 0;
+    color: #fff;
+}
+
+section#catalogo table th, td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+section#catalogo table a {
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+section#catalogo table a:hover {
+    color: #F40000;
+}
+
+/* Fim do estilos da página index.html */
+
+/* Estilos da página new.html */
+
+section#new {
+    background-color: #1f1f1f;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#new div#card {
+    position: relative;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 2%;
+    border: 1px solid #001052;
+    width: 400px;
+}
+
+section#new div.label-float {
+    position: relative;
+    padding-top: 13px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+section#new div.label-float input {
+    width: 100%;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 0;
+    border-bottom: 2px solid #090809;
+    background-color: transparent;
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all 0.3s ease-out;
+    border-radius: 0;
+}
+
+section#new div.label-float input:focus {
+    border-bottom: 2px solid #090809;
+}
+
+section#new div.label-float label {
+    color: #090809;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all 0.3s ease-out;
+}
+
+section#new div.label-float input:focus+label, section#new div.label-float input:valid+label {
+    font-size: 13px;
+    margin-top: 0;
+    color: #090809;
+}
+
+section#new div.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+section#new button {
+    background-color: transparent;
+    border-color: #090809;
+    color: #090809;
+    padding: 0.8rem;
+    font-size: 12pt;
+    margin-top: 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.4s ease-out;
+}
+
+section#new button:hover {
+    background-color: #090809;
+    color: #fff;
+}
+
+section#new h4 {
+    text-align: center;
+    color: #090809;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* Fim dos estilos da página new.html */
+
+/* Estilos do modal */
+
+section.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #00000080;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+}
+
+section.modal div#card {
+    width: 30rem;
+    position: relative;
+    background-color: #DA1E26;
+    border-radius: .5rem;
+}
+
+section.modal div#card h2 {
+    padding: 2rem;
+    margin: 0;
+    color: #fff;
+}
+
+section.modal div#card a#fechar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 2rem;
+    color: #000;
+    padding: 1.5rem;
+}
+
+section.modal div#card a#fechar:hover {
+    color: #fff;
+}
+
+section.modal div#card hr {
+    width: 90%;
+    margin: 0 auto;
+}
+
+section.modal div#card p {
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+section.modal div#card div#btns {
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem 2rem 2rem;
+}
+
+section.modal div#card div#btns a {
+    text-decoration: none;
+    padding: .9rem;
+    border-radius: .5rem;
+    width: 7rem;
+    text-align: center;
+}
+
+section.modal div#card div#btns a.btn-cancelar {
+    color: #fff;
+    border: solid 1px #fff;
+    margin-right: 1rem;
+    transition: all .5s ease-out;
+}
+
+section.modal div#card div#btns a.btn-cancelar:hover {
+    background-color: #fff;
+    color: #DA1E26;
+}
+
+section.modal div#card div#btns a.btn-apagar {
+    color: #fff;
+    border: solid 1px #fff;
+    transition: all .5s ease-out;
+}
+
+section.modal div#card div#btns a.btn-apagar:hover {
+    background-color: #fff;
+    color: #DA1E26;
+}
+
+/* Fim dos estilos do modal */

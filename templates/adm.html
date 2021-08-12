@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/css/adm.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="imagem/png" href="../static/img/fox3.png" />
+  <title>NINEFLIX | ADM</title>
+</head>
+
+<body>
+  <article id="msg">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+  </article>
+
+  <nav>
+    <div id="logo">
+      <a href="/">
+        <img src=" {{ url_for('static', filename='img/logo.png')}} " alt="">
+      </a>
+    </div>
+  </nav>
+
+  <section id="body">;;
+
+    <article id="new">
+      {% if filme == '' %}
+      <form action='/new' method="POST">
+      <h1>Cadastre um novo filme</h1>
+      {% else %}
+      <form action='/edit/{{filme.id}}' method="POST">
+      <h1>Atualize o filme</h1>
+      {% endif %}
+
+          <label for="nome">Título do Filme</label>
+          <input type="text" placeholder="Título do filme" id="nome" name="nome" value="{{filme.nome}}">
+
+          <label for="cartaz">Cartaz do Filme</label>
+          <input type="text" placeholder="Cartaz do Filme" id="cartaz" name="cartaz" value="{{filme.cartaz}}">
+
+          <label for="genero">Gênero do Filme</label>
+          <input type="text" placeholder="Gênero do Filme" id="genero" name="genero" value="{{filme.genero}}">
+
+          <div>
+            {% if filme == '' %}
+            <button type="submit">Cadastrar</button>
+            {% else %}
+            <a href="/adm">Cancelar</a>
+            <button type="submit">Atualizar</button>
+            {% endif %}
+          </div>
+
+        </form>
+    </article>
+
+    <article id="lista">
+      <table>
+
+          <thead>
+              <tr>
+                  <th>#</th>
+                  <th>Título</th>
+                  <th>Cartaz</th>
+                  <th>Gênero</th>
+                  <th>Ações</th>
+              </tr>
+          </thead>
+
+          <tbody>
+              {% for f in filmes %}
+              <tr>
+                  <td>{{f.id}}</td>
+                  <td>{{f.nome}}</td>
+                  <td><a href="{{f.cartaz}}" target="_blank">{{f.cartaz}}</a></td>
+                  <td>{{f.genero}}</td>
+                  <td>
+                      <a href="/edit/{{f.id}}">Editar</a>
+                      <a href="/{{f.id}}">Apagar</a>
+                  </td>
+              </tr>
+              {% endfor %}
+          </tbody>
+
+      </table>
+  </article>
+
+
+  {% if filmeDel != undefined %}
+  <section class="modal">
+      <div id="card">
+          <a href="/adm" id="fechar"><i class="fa fa-times" aria-hidden="true"></i></a>
+          <h2>Confirmação</h2>
+          <hr>
+          <p>Deseja realmente apagar o filme: {{filmeDel.nome}} </p>
+          <div id="btns">
+             <a class="btn-cancelar" id="close" href="/adm">Cancelar</a>
+             <a class="btn-apagar" href="/delete/{{filmeDel.id}}">Apagar</a>
+          </div>
+       </div>
+  </section>
+  {% endif %}
+
+  <footer class="footer__section">
+    <div class="container">
+       
+        <div class="footer__copyright__text">
+            <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | Grupo 9 - Turma 5 | Blue EdTech <i class="fa fa-heart" aria-hidden="true"></i></p>
+        </div>
+        
+    </div>
+  </footer>
+  
+  <script src="../static/js/adm.js"></script>
+  
+
+</body>
+
+</html>

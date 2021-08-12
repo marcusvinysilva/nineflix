@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/sobre.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="imagem/png" href="../static/img/fox3.png" />
+    <title>Nineflix | Sobre</title>
+</head>
+
+<body>
+
+    <nav>
+        <div id="logo">
+            <a href="/">
+                <img src=" {{ url_for('static', filename='img/logo.png')}} " alt="">
+            </a>
+        </div>
+
+        <!-- <div id="filtro-config">
+            <div id="filtro-filmes">
+                <form action="/filter" method="POST">
+                    <div id="filtro-input">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <input type="search" placeholder="Pesquisar" id="search" name="search">
+                    </div>
+                        
+                </form>
+            </div> -->
+            <!-- <div id="icon-config">
+                <a href="/login" id="config"> 
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div> -->
+    </nav>
+
+    <section id="catalogo2">
+        <h3>Meus Favoritos</h3>
+        
+    </section>
+    
+        <!-- <div id="title-lista">
+            <a href="/">Home</a>
+            <a href="/">Listar Tudo</a>
+        </div> -->
+
+    <header>
+        <div>
+            <span> Com a profusão de serviços de streaming há cada vez mais conteúdo disponível e é cada vez mais fácil e rápido encontrar e consumir novas mídias. E, por isso, um espaço para poder salvar e acessar seus conteúdos favoritos vem muito a calhar! Esse catálogo te ajuda com isso, nele você pode cadastrar seus filmes favoritos e buscá-los facilmente através do gênero da produção, assim, você pode revê-los sempre, e até compartilhar com amigos e com seus crush's. Será que vai dar match? </span>
+            <img src="../static/img/Virtual reality-pana.png" alt="Ilustração de Homem assistindo com óculos 3D">
+        </div>
+    </header>
+
+    <section id="devs">
+        <P2> Desenvolvedores do Projeto </P2>
+
+        <a href="https://anacarolinagarcone.herokuapp.com/" target="_blank">
+            <div class="box">
+                <div class="imgBX">
+                    <img src="../static/img/ana.png">
+                </div>
+                <div class="content">
+                    <h2>Ana Carolina<br><span>Developer</span></h2>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://portfoliocbernardox.herokuapp.com/" target="_blank">
+            <div class="box">
+                <div class="imgBX">
+                    <img src="../static/img/carlos.png">
+                </div>
+                <div class="content">
+                    <h2>Carlos<br><span>Developer</span></h2>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://portifoliocaua.herokuapp.com/" target="_blank">
+            <div class="box">
+                <div class="imgBX">
+                    <img src="../static/img/caua.png">
+                </div>
+                <div class="content">
+                    <h2>Cauã<br><span>Developer</span></h2>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://marcusvinysilvaportfolio.herokuapp.com/" target="_blank">
+            <div class="box">
+                <div class="imgBX">
+                    <img src="../static/img/marcus.png">
+                </div>
+                <div class="content">
+                    <h2>Marcus<br><span>Developer</span></h2>
+                </div>
+            </div>
+        </a>
+         
+      
+        <a href="https://portfoliossympson.herokuapp.com/" target="_blank">
+            <div class="box">
+                <div class="imgBX">
+                    <img src="../static/img/steffany.png">
+                </div>
+                <div class="content">
+                    <h2>Steffany Sympson<br><span>Developer</span></h2>
+                </div>
+            </div>
+        </a>
+
+    </section>
+
+    <footer class="footer__section">
+        <div class="container">
+           
+            <div class="footer__copyright__text">
+                <p>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | Grupo 9 - Turma 5 | Blue EdTech <i class="fa fa-heart" aria-hidden="true"></i></p>
+            </div>
+            
+        </div>
+    </footer>
+
+    <script src="../static/js/inicio.js"></script>
+
+</body>
+
+</html>

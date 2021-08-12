@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica";
+  background-color: #141414;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Helvetica';
+  background-color: #141414;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+nav a #img {
+  width: 50%;
+  padding: 1vw;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background: #141414;
+  height: 8vh;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 60vh;
+    background: #141414;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+}
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+article#msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article#msg ul {
+  width: 40%;
+  background-color: #97161c;
+  color: whitesmoke;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-radius: 0 0 .5rem .5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: 30rem;
+}
+
+article#msg ul li{
+  background-color: #97161c;
+}
+
+body section#login-box {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+
+body section#login-box form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 3rem;
+  background-color: rgb(48, 48, 48);
+  width: 40rem;
+  margin-top: 10vw;
+  box-shadow: rgba(149, 157, 165, .3) 0px 8px 24px;
+  border-radius: 2rem;
+}
+
+body section#login-box form h1 {
+  color: rgb(228, 0, 0);
+  background-color: rgb(48, 48, 48);
+  font-size: 2vw;
+  padding: 3rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+body section#login-box form input, textarea {
+  width: 100%;
+  background-color: antiquewhite;
+  padding: 0.3em;
+  font-size: 1.2rem;
+  margin: 0 0 1em;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  outline: none;
+}
+
+section#login-box form label {
+  width: 100%;
+  font-size: 1rem;
+}
+
+section#login-box form button {
+  border: 1px solid #ff0000;
+  background-color: #fff;
+  color: #ff0000;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: .5rem;
+  border-radius: 0.5rem;
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: background-color 0.7s ease-in-out;
+  width: 20%;
+}
+
+section#login-box form button:hover {
+  background-color: #ff1100;
+  color: #fff;
+}
+
+section#login-box form a i {
+  background-color: rgba(48, 48, 48, 0);
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  position: absolute;
+}

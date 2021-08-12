@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="imagem/png" href="../static/img/fox3.png" />
+    <title>Nineflix | Login</title>
+</head>
+<body>
+    
+    <article id="msg">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes>
+          {% for message in messages %}
+          <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+      </article>
+
+<nav>
+    <a class="logo" href="/"><img src="../static/img/logo.png" id="img"></a>
+    <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    
+</nav>
+
+
+<section id=login-box>
+    <form action='/auth' method="POST">
+        <h1>Acesso a área administrativa</h1>
+        <input type="password" placeholder="Digite a senha de acesso" id="senha" name="senha">
+        <button id="enviar">
+            Entrar
+        </button>
+
+    </section>
+
+    <footer></footer>
+    <script src="../static/js/adm.js"></script>
+    
+
+</body>
+</html>
