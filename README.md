@@ -1,4 +1,4 @@
-# Projeto Final - Catálogo
+# Projeto Catálogo
 
 Esse projeto consiste em criar uma aplicação web com HTML, CSS, JavaScript, Flask e SQL. Essa aplicação será um catálogo com tema livre, que irá listar inúmeros itens, este catálogo pode ser de filmes, músicas, séries, jogos, bebidas, carros, entre outros.
 
